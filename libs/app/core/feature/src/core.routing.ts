@@ -11,7 +11,17 @@ const routes: Routes = [
     path: 'weclome',
     loadChildren: () =>
       import('@socially/app/welcome/feature').then((m) => m.WelcomeModule),
-  }
+  },
+  {
+    path: 'login',
+    loadChildren: () =>
+      import('@socially/app/login/feature').then((m) => m.LoginModule),
+  },
+  {
+    path: 'signup',
+    loadChildren: () =>
+      import('@socially/app/signup/feature').then((m) => m.SignupModule),
+  },
 ];
 
 @NgModule({
